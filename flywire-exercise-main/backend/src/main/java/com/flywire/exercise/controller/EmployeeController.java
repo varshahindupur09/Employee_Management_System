@@ -93,7 +93,24 @@ public ResponseEntity<?> deleteEmployee(@PathVariable int id) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(Map.of("error", "Employee with ID " + id + " not found."));
     }
-}
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateEmployee(@PathVariable int id, @RequestBody Employee updatedEmployee) {
+        try {
+            Employee employee = employeeService.updateEmployee(id, updatedEmployee);
+            return ResponseEntity.ok(employee);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of("error", "Employee with ID " + id + " not found."));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("error", "Unexpected error: " + e.getMessage()));
+        }
+    }
+
 
 
 }

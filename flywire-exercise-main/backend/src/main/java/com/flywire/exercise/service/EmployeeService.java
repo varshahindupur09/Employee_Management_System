@@ -167,4 +167,26 @@ public class EmployeeService
     return removed;
     }
 
+    public Employee updateEmployee(int id, Employee updatedEmployee) {
+    List<Employee> employees = loadEmployees(); // Load from JSON or wherever you're storing
+    boolean found = false;
+
+    for (int i = 0; i < employees.size(); i++) {
+        if (employees.get(i).getId() == id) {
+            updatedEmployee.setId(id); // Ensure ID remains unchanged
+            employees.set(i, updatedEmployee);
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        throw new NoSuchElementException("Employee not found with ID: " + id);
+    }
+
+    saveEmployees(employees); // Persist to file
+    return updatedEmployee;
+    }
+
+
 }
