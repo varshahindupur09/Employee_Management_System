@@ -23,4 +23,4 @@ This is a Spring Boot web service that manages and retrieves company employee in
 
    ```bash
    git clone https://github.com/yourusername/flywire-exercise.git
-   cd flywire-exercise
+   cd flywire-exercise-main
