@@ -26,7 +26,11 @@ This is a Spring Boot web service that manages and retrieves company employee in
    cd flywire-exercise-main
 
 ## Screenshot of the UI:
+Image1:
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/2edd0604-2735-4db4-a506-d0ffa5d136c9" />
+
+Image2:
+<img width="1432" alt="image" src="https://github.com/user-attachments/assets/9a221082-89dd-493e-9515-f0d92e70e2dd" />
 
 ## Screenshot of Backend Testing using CURL command:
 <img width="857" alt="image" src="https://github.com/user-attachments/assets/7a2d33e1-ba1e-45a3-b267-439a33357e64" />
