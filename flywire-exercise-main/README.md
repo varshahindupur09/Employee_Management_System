@@ -1,4 +1,4 @@
-# Flywire Interview Exercise
+# Management System for Employees
 
 > Create an application to act as a web service for managing and retrieving company employee information. Please use any frameworks and libraries you feel comfortable with and would make sense for the situation. The application uses Spring Boot framework and Apache Tomcat to run the app locally. The data.json file will be the data source used to. If you would like to convert the JSON file into a different database respository, feel free. This base project should provide everything needed to start the web service application.
 
